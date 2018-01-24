@@ -33,3 +33,6 @@ src
 
 MUJOCO_LOG.TXT
 
+*.pkl
+py3env/
+

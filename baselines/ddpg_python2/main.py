@@ -5,7 +5,6 @@ import logging
 import pybullet_envs
 from baselines.ddpg_python2.misc_util import (
     set_global_seeds,
-    boolean_flag,
 )
 from baselines.ddpg_python2.config import exp_config
 import baselines.ddpg_python2.training as training
@@ -21,7 +20,6 @@ from mpi4py import MPI
 def run(env_id, seed, noise_type, layer_norm, evaluation, **kwargs):
     # Configure things.
     rank = MPI.COMM_WORLD.Get_rank()
-
 
     # Create envs.
     env = gym.make(env_id)
